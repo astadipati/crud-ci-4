@@ -13,5 +13,11 @@ class M_barang extends Model
             return $this->getWhere(['product_id' => $id]);
         }   
     }
+
+    public function saveProduct($data)
+    {
+        $query = $this->db->table($this->table)->insert($data);
+        return $query;
+    }
  
 }
