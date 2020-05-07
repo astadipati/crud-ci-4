@@ -19,5 +19,11 @@ class M_barang extends Model
         $query = $this->db->table($this->table)->insert($data);
         return $query;
     }
+
+    public function updateProduct($data, $id)
+    {
+        $query = $this->db->table($this->table)->update($data, array('product_id' => $id));
+        return $query;
+    }
  
 }

@@ -27,4 +27,23 @@ class Tescrud extends BaseController
         return redirect()->to('/tescrud');
     }
 
+    public function edit($id)
+    {
+        $model = new M_barang();
+        $data['product'] = $model->getProduct($id)->getRow();
+        echo view('edit_barang', $data);
+    }
+ 
+    public function update()
+    {
+        $model = new M_barang();
+        $id = $this->request->getPost('product_id');
+        $data = array(
+            'product_name'  => $this->request->getPost('product_name'),
+            'product_price' => $this->request->getPost('product_price'),
+        );
+        $model->updateProduct($data, $id);
+        return redirect()->to('/tescrud');
+    }
+
 }

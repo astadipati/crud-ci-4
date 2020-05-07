@@ -13,6 +13,7 @@
             <tr>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
             <tr>
                 <td><?= $row['product_name'];?></td>
                 <td><?= $row['product_price'];?></td>
+                <td><a href="/tescrud/edit/<?=$row['product_id'];?>">Edit</a></td>
             </tr>
         <?php endforeach;?>
         </tbody>
