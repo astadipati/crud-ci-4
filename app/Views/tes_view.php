@@ -10,6 +10,7 @@
     <h2><?= $title; ?></h2>
     <table>
         <thead>
+        <a href="tescrud/add_new">Tambah Data</a>
             <tr>
                 <th>Name</th>
                 <th>Price</th>
