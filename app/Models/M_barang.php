@@ -25,5 +25,11 @@ class M_barang extends Model
         $query = $this->db->table($this->table)->update($data, array('product_id' => $id));
         return $query;
     }
+
+    public function deleteProduct($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('product_id' => $id));
+        return $query;
+    } 
  
 }

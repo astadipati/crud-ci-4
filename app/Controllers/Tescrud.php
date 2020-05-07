@@ -46,4 +46,11 @@ class Tescrud extends BaseController
         return redirect()->to('/tescrud');
     }
 
+    public function delete($id)
+    {
+        $model = new M_barang();
+        $model->deleteProduct($id);
+        return redirect()->to('/tescrud');
+    }
+
 }
